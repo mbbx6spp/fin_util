@@ -9,5 +9,5 @@ generate_passphrase() ->
 
 generate_passphrase(Length) ->
   lists:flatten(lists:foldl(fun(X, AccIn) ->
-    [random:uniform(90) + 32 | AccIn] end,
+    [crypto:rand_uniform(32, 122) | AccIn] end,
     [], lists:seq(1, Length))).

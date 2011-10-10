@@ -1,8 +1,7 @@
-%% @author Susan Potter <me@susanpotter.net>
 %% @copyright 2010 Finsignia, LLC
-%% @doc utilities for the MOS platform.
+%% @doc Utilities for the Finsignia platform.
 
--module(mos_util).
+-module(fin_util).
 -export([generate_passphrase/0, generate_passphrase/1]).
 
 generate_passphrase() ->
@@ -12,5 +11,3 @@ generate_passphrase(Length) ->
   lists:flatten(lists:foldl(fun(X, AccIn) ->
     [random:uniform(90) + 32 | AccIn] end,
     [], lists:seq(1, Length))).
-
-

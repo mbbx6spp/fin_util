@@ -1,0 +1,14 @@
+%%-*- mode: erlang -*-
+{application, fin_util,
+ [
+  {description, "Utility functions (static OTP app)."},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { fin_util, []}},
+  {env, []}
+ ]}.
+%% vim: set filetype=erlang tabstop=2

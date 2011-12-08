@@ -20,6 +20,6 @@ generate_passphrase() ->
   generate_passphrase(8).
 
 generate_passphrase(Length) ->
-  lists:flatten(lists:foldl(fun(X, AccIn) ->
+  lists:flatten(lists:foldl(fun(_, AccIn) ->
     [crypto:rand_uniform(32, 122) | AccIn] end,
     [], lists:seq(1, Length))).
